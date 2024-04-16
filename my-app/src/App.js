@@ -1,26 +1,23 @@
-import './App.scss';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import Home from './Pages/Home.js';
-import About from './Pages/About.js';
+import React from "react";
+import "./Style/App.scss";
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import LogementSheet from "./Pages/LogementSheet";
+import ErrorPage from "./Pages/ErrorPage";
 
-function App() {
+const App = () => {
   return (
-<div className="App">
-    <Router>
-      <div>
-        <nav>
-          <Link to="/">Accueil</Link>
-          <Link to="/about">À propos</Link>
-        </nav>
-
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
-    </Router>
-</div>
-);
-}
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/accueil" />} />
+        <Route path="/accueil" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<LogementSheet />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </HashRouter>
+  );
+};
 
 export default App;

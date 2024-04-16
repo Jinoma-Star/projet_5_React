@@ -1,12 +1,36 @@
-import React from 'react';
+import React from "react";
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
+import Banner from "../Components/Banner";
+import AboutBanner from "../Assets/Banner/AboutBanner.png";
+import Collapse from "../Components/Collapse";
+import CollapseData from "../Data/collapses.json";
 
 const About = () => {
   return (
-    <div>
-      <h1>À Propos</h1>
-      <p>Ce site est conçu pour démontrer l'utilisation de React Router.</p>
+    <div className="about">
+      <Header />
+      <main>
+        <Banner image={AboutBanner} titre="" />
+
+        <div className="collapse">
+          <div className="collapse__dropdown">
+            {CollapseData.map((item) => {
+              return (
+                <div key={item.id}>
+                  <Collapse content={item.content} title={item.title} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </main>
+
+      <Footer />
     </div>
   );
 };
 
 export default About;
+
+/*YES*/
