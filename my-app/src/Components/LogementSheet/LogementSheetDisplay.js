@@ -1,4 +1,3 @@
-//import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import DataLogementSheet from "../../Data/logements.json";
 import Tag from "./Tag";
