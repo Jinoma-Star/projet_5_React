@@ -13,15 +13,15 @@ function Rate(props) {
             <img
               key={note.toString()}
               className="Star-rating"
-              src={emptyStar}
-              alt="Etoile Vide"
+              src={fullStar}
+              alt="Etoile"
             />
           ) : (
             <img
               key={note.toString()}
               className="Star-rating"
-              src={fullStar}
-              alt="Etoile"
+              src={emptyStar}
+              alt="Etoile vide"
             />
           )
         )}
