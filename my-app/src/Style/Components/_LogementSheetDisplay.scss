@@ -21,6 +21,7 @@
         }
         .logement-place {
           @include font(14px, 500);
+          color:$quaternary-color;
         }
       }
       &__tags {
