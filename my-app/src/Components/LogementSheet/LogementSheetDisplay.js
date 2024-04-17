@@ -70,7 +70,7 @@ const LogementSheetDisplay = () => {
                 content={LogementSheet?.description}
               />
             </div>
-            <div className="description-centent__equipement">
+            <div className="description-content__equipement">
               <Collapse title="Équipements" content={equipements} />
             </div>
           </div>
