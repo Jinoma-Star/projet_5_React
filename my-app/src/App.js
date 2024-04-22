@@ -11,7 +11,6 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <HashRouter>
-      <div>
         <Header />
         <Routes>
           <Route path="/" element={<Navigate replace to="/accueil" />} />
@@ -21,7 +20,6 @@ const App = () => {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />
-      </div>
     </HashRouter>
   );
 };
