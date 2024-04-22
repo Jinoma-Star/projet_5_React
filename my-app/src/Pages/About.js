@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import Banner from "../Components/Banner";
 import AboutBanner from "../Assets/Banner/AboutBanner.png";
 import Collapse from "../Components/Collapse";
@@ -9,7 +7,6 @@ import CollapseData from "../Data/collapses.json";
 const About = () => {
   return (
     <div className="about">
-      <Header />
       <main>
         <Banner image={AboutBanner} titre="" applyFilter={false} />
 
@@ -26,11 +23,8 @@ const About = () => {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 };
 
 export default About;
-
-/*YES*/
